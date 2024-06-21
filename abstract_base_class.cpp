@@ -3,7 +3,11 @@
 using namespace std;
 
 class CWH                       // Abstract base class
-{
+{        /* We made this base class knowing very well that we 
+will be able to create CWHVideo and CWHText through inheritance.
+We knew it from the start that the display function has to be overridden
+ Such classes which are made knowing very well that we will make derived class 
+ this is called abstract base class*/             
     protected:
         string title;
         float rating;
@@ -14,11 +18,11 @@ class CWH                       // Abstract base class
             rating = r;
 
         }
-        virtual void display()   // if we dont give virtual then this cout would have been executed twice
-        {
-            cout<<"Bogus code"<<endl;
-
-        }
+        /*We need to create a function knowing that we have to over ride any way*/
+       /* But if we dont create a display function in derived class, themn this display function will
+       run. But if you dont want that to happen. And will in case hhave to make a display function in derived class. For this
+       we make a pure virtual class. Then we will be forced to write the display function for the derived function*/
+        virtual void display()=0;       // do -nothing function --> pure virtual function
 };
 
 

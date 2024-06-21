@@ -12,7 +12,7 @@ class BaseClass
     {
         cout<<"1.Displaying base class variable var_base "<<var_base<<endl;
     }
-
+ 
 
 };
 
