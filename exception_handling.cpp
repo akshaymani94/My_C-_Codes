@@ -24,7 +24,7 @@ int main()
         z = division(x,y);
         cout<<endl<<z<<endl;
     }
-    catch (char* msg)
+    catch (const char* msg)
     {
         cerr<<msg<<endl;
     }    
